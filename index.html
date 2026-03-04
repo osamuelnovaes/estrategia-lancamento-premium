@@ -1,271 +1,274 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="dark-theme">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estratégia 15 Dias — O Lançamento</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    <title>Estratégia 15 Dias | Lançamento Ajustado</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Remisticon for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        /* Ajustes específicos para as novas seções de tráfego e recompra mantendo o estilo visual Glassmorphic */
+        .highlight-traffic {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid var(--warning);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .highlight-traffic h4 {
+            color: var(--warning);
+            margin-bottom: 0.5rem;
+        }
+
+        .upsell-card {
+            background: linear-gradient(145deg, rgba(139, 92, 246, 0.2), rgba(30, 41, 59, 0.6));
+            border-color: rgba(139, 92, 246, 0.4);
+            margin-top: 1.5rem;
+        }
+
+        .upsell-card h2 {
+            color: #c4b5fd;
+        }
+
+        .upsell-card .phase-number {
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+            box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .timeline-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .timeline-box h4 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .scenario-total {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .scenario-total .revenue {
+            font-size: 2.2rem;
+            margin-top: 0.5rem;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="bg-gradient"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
 
-    <nav class="apple-nav">
-        <div class="nav-content">
-            <span class="logo">Estratégia 15 Dias</span>
-            <div class="nav-links">
-                <a href="#fases">Fases</a>
-                <a href="#trafego">Tráfego</a>
-                <a href="#lives">As Lives</a>
-                <a href="#projecoes" class="btn-buy">Projeções</a>
-            </div>
-        </div>
+    <nav class="glass-nav">
+        <div class="logo">Lançamento <span>15 Dias</span></div>
+        <a href="#fases" class="btn-primary">Ver Estratégia</a>
     </nav>
 
-    <header class="hero section">
-        <div class="container reveal-up">
-            <h2 class="subhead">Dr. + Thaís Carla</h2>
-            <h1 class="headline">Lançamento focado em<br><span class="gradient-text">orgânico + narrativa forte.</span>
-            </h1>
-            <p class="intro">15 dias. Uma estratégia ajustada para conversão em massa, usando a força do tráfego
-                orgânico no início e a precisão do tráfego pago no final.</p>
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Dr + Thaís Carla</span>
+            <h1>Lançamento Orgânico <br><span class="text-gradient">Narrativa Forte</span></h1>
+            <p>Estratégia ajustada de 15 dias usando tráfego pago apenas para finalização, produto principal a R$97 e um
+                upsell focado na Live de Recompra.</p>
+            <div class="hero-stats">
+                <div class="stat"><i class="ri-fire-fill"></i><span>Orgânico Poderoso</span></div>
+                <div class="stat"><i class="ri-money-dollar-circle-fill"></i><span>Upsell Estratégico</span></div>
+                <div class="stat"><i class="ri-rocket-2-fill"></i><span>Tração Final</span></div>
+            </div>
+            <a href="#fases" class="scroll-down"><i class="ri-arrow-down-line"></i></a>
         </div>
     </header>
 
-    <section class="overview section bg-black">
-        <div class="container reveal-up">
-            <div class="feature-grid">
-                <div class="feature-box">
-                    <h3>Tráfego Pago</h3>
-                    <p>Até <strong>R$1.000</strong> usado quase no final, apenas para aquecimento e captura.</p>
+    <main id="fases" class="timeline">
+        <!-- Estrutura Geral -->
+        <div class="phase-card fade-in" style="margin-bottom: 4rem;">
+            <h2><i class="ri-route-line"></i> Estrutura do Funil</h2>
+            <div class="content-box">
+                <ol style="font-size: 1.2rem; line-height: 2;">
+                    <li><strong>1️⃣ Curiosidade nos Stories:</strong> (Geração de demanda inicial)</li>
+                    <li><strong>2️⃣ Grupo fechado:</strong> (Represa da audiência)</li>
+                    <li><strong>3️⃣ Aquecimento forte no grupo:</strong> (Educação e prova social)</li>
+                    <li><strong>4️⃣ Live Dia 15:</strong> Oferta do Produto R$97</li>
+                    <li><strong>5️⃣ Dia 22 (7 dias depois):</strong> Live de Recompra &rarr; 21 Dias Metabólico R$497
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Fase 1 -->
+        <div class="phase-card fade-in">
+            <div class="phase-number">Dia 1 ao 7</div>
+            <h2>Fase 1: Aquecimento Orgânico <i class="ri-leaf-line"></i></h2>
+            <p><strong>Objetivo:</strong> Tensão e curiosidade total sem uso de tráfego. (Apenas Orgânico)</p>
+
+            <div class="timeline-grid">
+                <div class="timeline-box">
+                    <h4>Dia 1 e 2</h4>
+                    <p><strong>A Plantação & Dor Real:</strong> Thaís fala que pagou muito caro por algo que destravou
+                        seu metabolismo. Foca no efeito sanfona, metabolismo travado e frustração.</p>
+                    <p class="quote">"Você sente que faz tudo certo e não emagrece?"</p>
                 </div>
-                <div class="feature-box">
-                    <h3>Produto Principal</h3>
-                    <p><strong>R$97</strong>. Entrada impossível de ser ignorada.</p>
+                <div class="timeline-box">
+                    <h4>Dia 3 e 4</h4>
+                    <p><strong>Apresentação & Autoridade:</strong> Apresenta os bastidores com o Doutor.</p>
+                    <p class="quote">"Queria que mais pessoas tivessem acesso... mas depende dele."</p>
                 </div>
-                <div class="feature-box">
-                    <h3>Upsell Forte</h3>
-                    <p><strong>R$497</strong>. Oferecido apenas na Live de Recompra.</p>
+                <div class="timeline-box">
+                    <h4>Dia 5 ao 7</h4>
+                    <p><strong>A Grande Disputa:</strong> Dia 5 usa enquete "Entraria se eu conseguisse?". Dia 6 solta o
+                        "Consegui" abrindo o grupo. Dia 7 explode chamando via orgânico, com prints e contagem de
+                        pessoas.</p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Estrutura do Funil -->
-    <section class="funnel section" id="fases">
-        <div class="container text-center reveal-up">
-            <h2 class="section-title">A Estrutura do Funil.</h2>
-            <p class="section-subtitle">Cinco passos simples. Resultados exponenciais.</p>
-
-            <div class="funnel-steps">
-                <div class="step reveal-up" style="transition-delay: 0.1s">
-                    <span class="step-num">1</span>
-                    <p>Curiosidade<br>nos Stories</p>
-                </div>
-                <div class="step reveal-up" style="transition-delay: 0.2s">
-                    <span class="step-num">2</span>
-                    <p>Grupo<br>Fechado</p>
-                </div>
-                <div class="step reveal-up" style="transition-delay: 0.3s">
-                    <span class="step-num">3</span>
-                    <p>Aquecimento<br>Forte</p>
-                </div>
-                <div class="step reveal-up" style="transition-delay: 0.4s">
-                    <span class="step-num">4</span>
-                    <p>Live Dia 15<br><span class="highlight">R$97</span></p>
-                </div>
-                <div class="step reveal-up" style="transition-delay: 0.5s">
-                    <span class="step-num">5</span>
-                    <p>Recompra (7d)<br><span class="highlight">R$497</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fase 1 -->
-    <section class="timeline-section section bg-darker">
-        <div class="container">
-            <div class="reveal-up text-center mb-large">
-                <h2 class="section-title">Fase 1: Aquecimento Orgânico.</h2>
-                <p class="section-subtitle">Dia 1 ao 7. Zero tráfego pago. Força total na narrativa.</p>
+        <!-- Fase 2 -->
+        <div class="phase-card fade-in">
+            <div class="phase-number">Dia 8 ao 13</div>
+            <h2>Fase 2: Aquecimento Interno <i class="ri-whatsapp-line"></i></h2>
+            <p><strong>Objetivo:</strong> O grupo agora é o foco central. Nenhuma venda, só construção de desejo.</p>
+            <div class="content-box">
+                <h4><i class="ri-folder-open-fill"></i> Conteúdo Entregue:</h4>
+                <ul>
+                    <li>Erro nº 1 que trava o metabolismo.</li>
+                    <li>Por que a dieta falha.</li>
+                    <li>Mini aulas estratégicas e cirúrgicas.</li>
+                    <li>Prova social.</li>
+                    <li>Antecipação intensa da Live do Dia 15.</li>
+                </ul>
             </div>
 
-            <div class="timeline-cards">
-                <div class="apple-card reveal-up">
-                    <div class="day-badge">Dia 1</div>
-                    <h4>A Plantação</h4>
-                    <p><strong>Thaís:</strong> "Eu paguei muito caro por algo que destravou meu metabolismo."</p>
-                    <p><strong>Caixa de pergunta:</strong> "Você sente que faz tudo certo e não emagrece?"</p>
+            <!-- Tráfego Box -->
+            <div class="highlight-traffic fade-in mt-large">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                    <h4><i class="ri-megaphone-fill"></i> Tráfego Pago – O Ponto Chave</h4>
+                    <span
+                        style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold;">Até
+                        R$ 1.000</span>
                 </div>
+                <p><strong>Quando usar?</strong> Apenas do Dia 12 ao 15 (3 ou 4 dias antes da live).</p>
+                <p><strong>Objetivo Direto:</strong> Levar direto para o grupo! Não vender, não prometer transformação.
+                    <strong>Só Gerar Curiosidade.</strong></p>
 
-                <div class="apple-card reveal-up">
-                    <div class="day-badge">Dia 2 & 3</div>
-                    <h4>Dor Real & Autoridade</h4>
-                    <p>Foco na dor: efeito sanfona, metabolismo travado e frustração.</p>
-                    <p>Apresentação do Doutor de forma orgânica, mostrando os bastidores e transferindo autoridade.</p>
-                </div>
-
-                <div class="apple-card reveal-up">
-                    <div class="day-badge">Dia 4 & 5</div>
-                    <h4>A Negociação Fechada</h4>
-                    <p>"Queria que mais pessoas tivessem acesso... mas depende dele."</p>
-                    <p>"Vou falar com ele." + Enquete: "Você entraria se eu conseguisse?"</p>
-                </div>
-
-                <div class="apple-card reveal-up">
-                    <div class="day-badge">Dia 6 & 7</div>
-                    <h4>A Explosão</h4>
-                    <p>"Consegui." Abertura do grupo fechado.</p>
-                    <p>Explode no orgânico: Stories chamando, prints reais do grupo e contagem de pessoas entrando
-                        (FOMO).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fase 2 -->
-    <section class="timeline-section section">
-        <div class="container">
-            <div class="split-layout">
-                <div class="split-text reveal-left">
-                    <h2 class="section-title">Fase 2: Aquecimento <br>Interno.</h2>
-                    <p class="section-subtitle">Dia 8 ao 13. O grupo agora é o centro do universo.</p>
-                    <p class="text-gray">Nenhuma venda acontece aqui. Apenas construção de desejo e valor absurdo.</p>
-                </div>
-                <div class="split-content reveal-right">
-                    <ul class="apple-list">
-                        <li><i class="ri-close-circle-line"></i> Erro nº1 que trava o metabolismo.</li>
-                        <li><i class="ri-restaurant-line"></i> Por que as dietas normais falham.</li>
-                        <li><i class="ri-macbook-line"></i> Mini aulas diretas ao ponto.</li>
-                        <li><i class="ri-user-star-line"></i> Prova social real e imparável.</li>
-                        <li><i class="ri-calendar-event-line"></i> Antecipação massiva da live do dia 15.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tráfego -->
-    <section class="traffic-section section bg-black" id="trafego">
-        <div class="container text-center reveal-up">
-            <h2 class="headline giant">Agora sim. Tráfego.</h2>
-            <p class="section-subtitle">Mas com inteligência. Apenas do Dia 12 ao 15.</p>
-
-            <div class="stats-grid">
-                <div class="stat-box reveal-up" style="transition-delay: 0.1s">
-                    <h4>Orçamento</h4>
-                    <span class="big-number">R$1.000</span>
-                    <p>Máximo alocado.</p>
-                </div>
-                <div class="stat-box reveal-up" style="transition-delay: 0.2s">
-                    <h4>Objetivo</h4>
-                    <span class="big-number">Captura</span>
-                    <p>Levar direto ao grupo.</p>
-                </div>
-                <div class="stat-box reveal-up" style="transition-delay: 0.3s">
-                    <h4>Promessa</h4>
-                    <span class="big-number">Zero</span>
-                    <p>Apenas curiosidade.</p>
-                </div>
-            </div>
-
-            <div class="apple-card dark-card mt-large reveal-up">
-                <h3>Criativo da Thaís</h3>
                 <p class="quote">"Dia 15 eu e o Doutor vamos liberar algo que eu paguei muito caro para ter acesso...
                     mas só para quem estiver no grupo."</p>
-                <p class="text-gray mt-small">O tráfego só serve para aumentar o volume final e pegar indecisos. O motor
-                    continua sendo o orgânico.</p>
+
+                <div class="alert warning" style="margin-top: 1rem; border-color: rgba(245, 158, 11, 0.4);">
+                    <i class="ri-error-warning-fill"></i>
+                    <span>O tráfego só serve para captar indecisos e dar movimento. <strong>O motor principal continua
+                            sendo o orgânico.</strong></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fase 3 - LIVE 15 -->
+        <div class="phase-card feature-card fade-in">
+            <div class="phase-number pulse">O Evento Principal</div>
+            <h2>Fase 3: Live do Produto R$97 (Dia 15) <i class="ri-live-fill"></i></h2>
+            <p>A live que abre o jogo e faz o caixa inicial.</p>
+            <div class="grid-2">
+                <div class="content-box">
+                    <h4>Estrutura:</h4>
+                    <ol>
+                        <li>História real da Thaís</li>
+                        <li>Ancoragem na Dor</li>
+                        <li>Autoridade do Doutor</li>
+                        <li>Explicação do Método</li>
+                        <li>A Oferta Clara</li>
+                    </ol>
+                </div>
+                <div class="highlight-box">
+                    <i class="ri-ticket-2-fill large-icon"></i>
+                    <p class="big-quote">Produto de Entrada:<br><span style="font-size: 2.5rem; color: #fff;">R$
+                            97</span></p>
+                    <p style="margin-top: 0.5rem; color: #cbd5e1;">Prazo de 24h • Meta: 5% a 15% conv.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fase 4 - UPSELL -->
+        <div class="phase-card upsell-card fade-in">
+            <div class="phase-number">Dia 22</div>
+            <h2>Fase 4: Live de Recompra <i class="ri-refresh-line"></i></h2>
+            <p>O momento exato onde o produto maior entra em cena: 7 dias de retenção para uma conversão pesada.</p>
+            <div class="content-box" style="background: rgba(0,0,0,0.4); text-align: center;">
+                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 1rem;">🔥 21 Dias de Transformação Metabólica
+                </h3>
+                <p style="font-size: 1.2rem; text-decoration: line-through; color: #94a3b8;">De R$ 997</p>
+                <p style="font-size: 2.5rem; color: #c4b5fd; font-weight: bold; margin: 0.5rem 0;">Por R$ 497</p>
+                <div class="alert info"
+                    style="justify-content: center; background: rgba(139, 92, 246, 0.2); border-color: rgba(139, 92, 246, 0.4); color: #c4b5fd;">
+                    <i class="ri-information-fill"></i> <span>Oferta válida <strong>somente ao vivo</strong>.</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <section id="projecao" class="projections fade-in">
+        <h2><i class="ri-bar-chart-box-fill"></i> Cenários de Resultado</h2>
+        <div class="cards-grid">
+            <div class="proj-card">
+                <h3><span class="sub" style="color:#fff; display:block; margin-bottom: 0.5rem;">Cenário 1</span> 1.000
+                    Compradores</h3>
+                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+                <div style="text-align: left; font-size: 1.1rem; line-height: 2;">
+                    <div style="display:flex; justify-content:space-between"><span>Produto (97):</span> <strong>R$
+                            97.000</strong></div>
+                    <div style="display:flex; justify-content:space-between"><span>Upsell 10% (497):</span> <strong
+                            style="color:var(--primary)">R$ 49.700</strong></div>
+                </div>
+                <div class="scenario-total">
+                    <div style="font-size: 1rem; color: #cbd5e1;">Faturamento Total:</div>
+                    <div class="revenue">≈ R$ 146.700</div>
+                </div>
+            </div>
+
+            <div class="proj-card highlight-proj">
+                <h3><span class="sub" style="color:var(--primary); display:block; margin-bottom: 0.5rem;">Cenário 2
+                        (Escala)</span> 2.000 Compradores</h3>
+                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+                <div style="text-align: left; font-size: 1.1rem; line-height: 2;">
+                    <div style="display:flex; justify-content:space-between; color: #fff;"><span>Produto (97):</span>
+                        <strong>R$ 194.000</strong></div>
+                    <div style="display:flex; justify-content:space-between; color: #fff;"><span>Upsell 10%
+                            (497):</span> <strong style="color:var(--primary)">R$ 99.400</strong></div>
+                </div>
+                <div class="scenario-total">
+                    <div style="font-size: 1rem; color: #cbd5e1;">Faturamento Total:</div>
+                    <div class="revenue">≈ R$ 293.400</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Dia 15 e 22 -->
-    <section class="live-section section" id="lives">
-        <div class="container">
-            <div class="split-layout reverse">
-                <div class="split-text reveal-right">
-                    <div class="day-badge solid">Dia 15</div>
-                    <h2 class="section-title">Live do<br>Produto de Entrada.</h2>
-                    <ul class="structure-list">
-                        <li><span>1</span> História real da Thaís (Dor).</li>
-                        <li><span>2</span> Autoridade absoluta do Doutor.</li>
-                        <li><span>3</span> Explicação lógica do Método.</li>
-                        <li><span>4</span> A Oferta.</li>
-                    </ul>
-                    <div class="price-callout">
-                        <span class="price">R$ 97</span>
-                        <p>Prazo: 24 horas.<br>Meta: 5% a 15% de conversão.</p>
-                    </div>
-                </div>
-
-                <div class="split-text reveal-left mt-mobile">
-                    <div class="day-badge solid purple">Dia 22</div>
-                    <h2 class="section-title">Live de<br>Recompra.</h2>
-                    <p class="text-gray">7 dias depois. Apenas para quem já sentiu o poder do produto. É a hora da
-                        transformação definitiva.</p>
-                    <div class="upsell-box mt-medium">
-                        <h4>21 Dias de Transformação Metabólica</h4>
-                        <div class="price-strike">De R$ 997</div>
-                        <div class="price-new">Por R$ 497</div>
-                        <p class="urgency">Somente ao vivo.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projeções -->
-    <section class="projections section bg-darker parallax" id="projecoes">
-        <div class="container text-center reveal-up">
-            <h2 class="section-title">Cenários de Resultado.</h2>
-            <p class="section-subtitle">O poder da matemática aplicada.</p>
-
-            <div class="scenarios-grid mt-large">
-                <div class="scenario-card reveal-up" style="transition-delay: 0.1s">
-                    <div class="scenario-header">1.000 Compradores</div>
-                    <div class="scenario-line">
-                        <span>Produto R$97:</span>
-                        <strong>R$ 97.000</strong>
-                    </div>
-                    <div class="scenario-line highlight-line">
-                        <span>Upsell (Recompra 10%):</span>
-                        <strong>R$ 49.700</strong>
-                    </div>
-                    <div class="scenario-total">
-                        <span>Total estimado:</span>
-                        <strong>≈ R$ 146.700</strong>
-                    </div>
-                </div>
-
-                <div class="scenario-card premium reveal-up" style="transition-delay: 0.2s">
-                    <div class="badge-scale">Escala</div>
-                    <div class="scenario-header">2.000 Compradores</div>
-                    <div class="scenario-line">
-                        <span>Produto R$97:</span>
-                        <strong>R$ 194.000</strong>
-                    </div>
-                    <div class="scenario-line highlight-line">
-                        <span>Upsell (Recompra 10%):</span>
-                        <strong>R$ 99.400</strong>
-                    </div>
-                    <div class="scenario-total">
-                        <span>Total estimado:</span>
-                        <strong>≈ R$ 293.400</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="apple-footer">
-        <div class="container text-center">
-            <p>Estratégia VIP 15 Dias. Desenvolvido para máxima fluidez e conversão.</p>
-        </div>
+    <footer>
+        <p>Estratégia de Lançamento Premium — Otimizada para escala brutal com orgânico.</p>
     </footer>
 
     <script src="script.js"></script>
