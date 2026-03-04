@@ -121,6 +121,72 @@
             color: var(--text-muted);
             margin-bottom: 0;
         }
+
+        /* Tabs Styles */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: -2rem auto 3rem;
+            max-width: 800px;
+            padding: 0 5%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .tab-btn {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            color: var(--text-muted);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+            border-color: transparent;
+        }
+
+        .tab-pane {
+            display: none;
+            animation: fadeInTab 0.5s ease;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        @keyframes fadeInTab {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mt-large {
+            margin-top: 3rem;
+        }
     </style>
 </head>
 
@@ -149,235 +215,482 @@
         </div>
     </header>
 
-    <main id="fases" class="timeline">
-        <!-- Estrutura Geral -->
-        <div class="phase-card fade-in" style="margin-bottom: 4rem;">
-            <h2><i class="ri-route-line"></i> Estrutura do Funil</h2>
-            <div class="content-box">
-                <ul class="bullet-list"
-                    style="font-size: 1.2rem; line-height: 2; list-style-type: none; margin-left: 0;">
-                    <li><strong>1️⃣ Transformação e curiosidade:</strong> Curiosidade nos stories</li>
-                    <li><strong>2️⃣ O destino:</strong> Grupo fechado</li>
-                    <li><strong>3️⃣ Aquecimento forte:</strong> Aquecimento no grupo</li>
-                    <li><strong>4️⃣ O evento principal:</strong> Live Dia 15 → Produto R$97</li>
-                    <li><strong>5️⃣ Uma semana depois:</strong> 7 dias depois → Live de Recompra → 21 Dias Metabólico
-                        R$497</li>
-                </ul>
-            </div>
-        </div>
+    <div class="tabs-container">
+        <button class="tab-btn active" data-target="tab-estrategia">
+            <i class="ri-route-line"></i> Estratégia Geral
+        </button>
+        <button class="tab-btn" data-target="tab-reels">
+            <i class="ri-instagram-line"></i> Reels e Stories
+        </button>
+    </div>
 
-        <!-- Fase 1 -->
-        <div class="phase-card fade-in">
-            <div class="phase-number">Dia 1 ao 7</div>
-            <h2>Fase 1: Aquecimento Orgânico <i class="ri-leaf-line"></i></h2>
-            <p>Aqui <strong>não entra tráfego.</strong> O foco é 100% orgânico e narrativa.</p>
-
-            <div class="timeline-grid">
-                <!-- Dia 1 -->
-                <div class="timeline-box">
-                    <h4><i class="ri-calendar-event-line"></i> Dia 1</h4>
-                    <ul class="day-list">
-                        <li><strong>Thaís:</strong> "Eu paguei muito caro por algo que destravou meu metabolismo."</li>
-                        <li><strong>Caixa de pergunta:</strong> "Você sente que faz tudo certo e não emagrece?"</li>
-                    </ul>
-                </div>
-                <!-- Dia 2 -->
-                <div class="timeline-box">
-                    <h4><i class="ri-calendar-event-line"></i> Dia 2</h4>
-                    <p style="color:#fff; margin-bottom: 0.5rem;"><strong>Dor real:</strong></p>
-                    <ul class="bullet-list">
-                        <li>Efeito sanfona</li>
-                        <li>Metabolismo travado</li>
-                        <li>Frustração</li>
-                    </ul>
-                </div>
-                <!-- Dia 3 -->
-                <div class="timeline-box">
-                    <h4><i class="ri-calendar-event-line"></i> Dia 3</h4>
-                    <ul class="bullet-list">
-                        <li>Apresenta o Doutor.</li>
-                        <li>Bastidores.</li>
-                        <li>Autoridade.</li>
-                    </ul>
-                </div>
-                <!-- Dia 4 -->
-                <div class="timeline-box">
-                    <h4><i class="ri-calendar-event-line"></i> Dia 4</h4>
-                    <p class="quote">"Queria que mais pessoas tivessem acesso… mas depende dele."</p>
-                </div>
-                <!-- Dia 5 -->
-                <div class="timeline-box">
-                    <h4><i class="ri-calendar-event-line"></i> Dia 5</h4>
-                    <ul class="day-list">
-                        <li><strong>Thaís:</strong> "Vou falar com ele."</li>
-                        <li><strong>Enquete:</strong> "Você entraria se eu conseguisse?"</li>
-                    </ul>
-                </div>
-                <!-- Dia 6 -->
-                <div class="timeline-box">
-                    <h4><i class="ri-calendar-event-line"></i> Dia 6</h4>
-                    <ul class="day-list">
-                        <li><strong>Thaís:</strong> "Consegui."</li>
-                        <li>Abre grupo fechado.</li>
-                    </ul>
-                </div>
-                <!-- Dia 7 -->
-                <div class="timeline-box">
-                    <h4><i class="ri-calendar-event-line"></i> Dia 7</h4>
-                    <p style="color:#fff; margin-bottom: 0.5rem;"><strong>Explode o grupo no orgânico:</strong></p>
-                    <ul class="bullet-list">
-                        <li>Stories chamando</li>
-                        <li>Print do grupo</li>
-                        <li>Contagem de pessoas entrando</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fase 2 -->
-        <div class="phase-card fade-in">
-            <div class="phase-number">Dia 8 ao 13</div>
-            <h2>Fase 2: Aquecimento Interno <i class="ri-whatsapp-line"></i></h2>
-            <p><strong>Agora o grupo é o foco.</strong> Sem venda ainda. Só construção de desejo.</p>
-            <div class="content-box">
-                <h4 style="color:#fff; margin-bottom:0.5rem;">Conteúdo:</h4>
-                <ul class="bullet-list">
-                    <li>Erro nº1 que trava metabolismo</li>
-                    <li>Por que dieta falha</li>
-                    <li>Mini aula</li>
-                    <li>Prova social</li>
-                    <li>Antecipação da live</li>
-                </ul>
-            </div>
-
-            <!-- Tráfego Box -->
-            <div class="highlight-traffic fade-in mt-large">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                    <h4><i class="ri-megaphone-fill"></i> Tráfego Pago – Usado no final</h4>
-                </div>
-                <p>Agora sim.</p>
-
-                <div class="grid-blocks">
-                    <div class="info-block">
-                        <h4>📌 Quando usar?</h4>
-                        <p>Dia 12 ao 15 (3 a 4 dias antes da live).</p>
-                    </div>
-                    <div class="info-block">
-                        <h4>📌 Quanto?</h4>
-                        <p>Até R$1.000 total.</p>
-                    </div>
-                    <div class="info-block">
-                        <h4>📌 Objetivo</h4>
-                        <p>Levar direto para o grupo antes da live. <br><strong>Não vender.
-                                Não prometer transformação.
-                                Só gerar curiosidade.</strong></p>
-                    </div>
-                </div>
-
-                <h4 style="color: #fff; margin-top:1.5rem;">Criativo da Thaís:</h4>
-                <p class="quote" style="font-size:1.1rem">"Dia 15 eu e o Doutor vamos liberar algo que eu paguei muito
-                    caro para ter acesso… mas só para quem estiver no grupo."</p>
-
-                <div class="alert warning" style="margin-top: 1rem; border-color: rgba(245, 158, 11, 0.4);">
-                    <i class="ri-error-warning-fill"></i>
-                    <div>
-                        <span style="display:block; margin-bottom: 0.5rem;"><strong>⚠️ O tráfego aqui serve
-                                para:</strong></span>
-                        <ul class="bullet-list" style="margin-top:0; color: #fbbf24;">
-                            <li>Aumentar volume final</li>
-                            <li>Pegar pessoas indecisas</li>
-                            <li>Criar sensação de movimento</li>
-                        </ul>
-                        <span>Mas <strong>o motor principal continua sendo o orgânico dela.</strong></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Fase 3 - LIVE 15 -->
-        <div class="phase-card feature-card fade-in">
-            <div class="phase-number pulse">Dia 15</div>
-            <h2>Live do Produto R$97 <i class="ri-live-fill"></i></h2>
-            <div class="grid-2">
+    <!-- TAB 1: Estratégia -->
+    <div id="tab-estrategia" class="tab-pane active">
+        <main id="fases" class="timeline">
+            <!-- Estrutura Geral -->
+            <div class="phase-card fade-in" style="margin-bottom: 4rem;">
+                <h2><i class="ri-route-line"></i> Estrutura do Funil</h2>
                 <div class="content-box">
-                    <h4>Estrutura:</h4>
-                    <ol>
-                        <li>História real da Thaís</li>
-                        <li>Dor</li>
-                        <li>Autoridade do Doutor</li>
-                        <li>Explicação do método</li>
-                        <li>Oferta</li>
-                    </ol>
-                </div>
-                <div class="highlight-box">
-                    <i class="ri-hand-coin-line large-icon"></i>
-                    <p class="big-quote">Oferta</p>
                     <ul class="bullet-list"
-                        style="text-align:left; color:#fff; list-style-type:none; margin-left:0; margin-top:1rem;">
-                        <li><strong>Produto de entrada:</strong> R$97</li>
-                        <li><strong>Prazo:</strong> 24h</li>
-                        <li><strong>Meta de conversão:</strong> 5% a 15%</li>
+                        style="font-size: 1.2rem; line-height: 2; list-style-type: none; margin-left: 0;">
+                        <li><strong>1️⃣ Transformação e curiosidade:</strong> Curiosidade nos stories</li>
+                        <li><strong>2️⃣ O destino:</strong> Grupo fechado</li>
+                        <li><strong>3️⃣ Aquecimento forte:</strong> Aquecimento no grupo</li>
+                        <li><strong>4️⃣ O evento principal:</strong> Live Dia 15 → Produto R$97</li>
+                        <li><strong>5️⃣ Uma semana depois:</strong> 7 dias depois → Live de Recompra → 21 Dias
+                            Metabólico
+                            R$497</li>
                     </ul>
                 </div>
             </div>
-        </div>
 
-        <!-- Fase 4 - UPSELL -->
-        <div class="phase-card upsell-card fade-in">
-            <div class="phase-number">Dia 22</div>
-            <h2>Live de Recompra <i class="ri-refresh-line"></i></h2>
-            <p><strong>Agora entra o produto maior.</strong></p>
-            <div class="content-box" style="background: rgba(0,0,0,0.4); text-align: center;">
-                <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 1rem;">🔥 21 Dias de Transformação Metabólica
-                </h3>
-                <p style="font-size: 1.2rem; text-decoration: line-through; color: #94a3b8;">De 997</p>
-                <p style="font-size: 2.5rem; color: #c4b5fd; font-weight: bold; margin: 0.5rem 0;">Por 497</p>
-                <div class="alert info"
-                    style="justify-content: center; background: rgba(139, 92, 246, 0.2); border-color: rgba(139, 92, 246, 0.4); color: #c4b5fd;">
-                    <i class="ri-information-fill"></i> <span>Somente ao vivo.</span>
+            <!-- Fase 1 -->
+            <div class="phase-card fade-in">
+                <div class="phase-number">Dia 1 ao 7</div>
+                <h2>Fase 1: Aquecimento Orgânico <i class="ri-leaf-line"></i></h2>
+                <p>Aqui <strong>não entra tráfego.</strong> O foco é 100% orgânico e narrativa.</p>
+
+                <div class="timeline-grid">
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 1</h4>
+                        <ul class="day-list">
+                            <li><strong>Thaís:</strong> "Eu paguei muito caro por algo que destravou meu metabolismo."
+                            </li>
+                            <li><strong>Caixa de pergunta:</strong> "Você sente que faz tudo certo e não emagrece?"</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 2</h4>
+                        <p style="color:#fff; margin-bottom: 0.5rem;"><strong>Dor real:</strong></p>
+                        <ul class="bullet-list">
+                            <li>Efeito sanfona</li>
+                            <li>Metabolismo travado</li>
+                            <li>Frustração</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 3</h4>
+                        <ul class="bullet-list">
+                            <li>Apresenta o Doutor.</li>
+                            <li>Bastidores.</li>
+                            <li>Autoridade.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 4</h4>
+                        <p class="quote">"Queria que mais pessoas tivessem acesso… mas depende dele."</p>
+                    </div>
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 5</h4>
+                        <ul class="day-list">
+                            <li><strong>Thaís:</strong> "Vou falar com ele."</li>
+                            <li><strong>Enquete:</strong> "Você entraria se eu conseguisse?"</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 6</h4>
+                        <ul class="day-list">
+                            <li><strong>Thaís:</strong> "Consegui."</li>
+                            <li>Abre grupo fechado.</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 7</h4>
+                        <p style="color:#fff; margin-bottom: 0.5rem;"><strong>Explode o grupo no orgânico:</strong></p>
+                        <ul class="bullet-list">
+                            <li>Stories chamando</li>
+                            <li>Print do grupo</li>
+                            <li>Contagem de pessoas entrando</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </main>
-
-    <section id="projecao" class="projections fade-in">
-        <h2><i class="ri-bar-chart-box-fill"></i> Cenários de Resultado</h2>
-        <div class="cards-grid">
-            <div class="proj-card">
-                <h3><span class="sub" style="color:#fff; display:block; margin-bottom: 0.5rem;">Escala – 1.000
-                        compradores</span>(quando rodar máquina maior)</h3>
-                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
-                <div style="text-align: left; font-size: 1.1rem; line-height: 2;">
-                    <div style="display:flex; justify-content:space-between"><span>Produto 97:</span> <strong>R$
-                            97.000</strong></div>
-                    <div style="display:flex; justify-content:space-between"><span>Upsell 10%:</span> <strong
-                            style="color:var(--primary)">R$ 49.700</strong></div>
+            <!-- Fase 2 -->
+            <div class="phase-card fade-in">
+                <div class="phase-number">Dia 8 ao 13</div>
+                <h2>Fase 2: Aquecimento Interno <i class="ri-whatsapp-line"></i></h2>
+                <p><strong>Agora o grupo é o foco.</strong> Sem venda ainda. Só construção de desejo.</p>
+                <div class="content-box">
+                    <h4 style="color:#fff; margin-bottom:0.5rem;">Conteúdo:</h4>
+                    <ul class="bullet-list">
+                        <li>Erro nº1 que trava metabolismo</li>
+                        <li>Por que dieta falha</li>
+                        <li>Mini aula</li>
+                        <li>Prova social</li>
+                        <li>Antecipação da live</li>
+                    </ul>
                 </div>
-                <div class="scenario-total">
-                    <div style="font-size: 1rem; color: #cbd5e1;">Total:</div>
-                    <div class="revenue">≈ R$ 146.700</div>
+
+                <!-- Tráfego Box -->
+                <div class="highlight-traffic fade-in mt-large">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                        <h4><i class="ri-megaphone-fill"></i> Tráfego Pago – Usado no final</h4>
+                    </div>
+                    <p>Agora sim.</p>
+
+                    <div class="grid-blocks">
+                        <div class="info-block">
+                            <h4>📌 Quando usar?</h4>
+                            <p>Dia 12 ao 15 (3 a 4 dias antes da live).</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>📌 Quanto?</h4>
+                            <p>Até R$1.000 total.</p>
+                        </div>
+                        <div class="info-block">
+                            <h4>📌 Objetivo</h4>
+                            <p>Levar direto para o grupo antes da live. <br><strong>Não vender.
+                                    Não prometer transformação.
+                                    Só gerar curiosidade.</strong></p>
+                        </div>
+                    </div>
+
+                    <h4 style="color: #fff; margin-top:1.5rem;">Criativo da Thaís:</h4>
+                    <p class="quote" style="font-size:1.1rem">"Dia 15 eu e o Doutor vamos liberar algo que eu paguei
+                        muito
+                        caro para ter acesso… mas só para quem estiver no grupo."</p>
+
+                    <div class="alert warning" style="margin-top: 1rem; border-color: rgba(245, 158, 11, 0.4);">
+                        <i class="ri-error-warning-fill"></i>
+                        <div>
+                            <span style="display:block; margin-bottom: 0.5rem;"><strong>⚠️ O tráfego aqui serve
+                                    para:</strong></span>
+                            <ul class="bullet-list" style="margin-top:0; color: #fbbf24;">
+                                <li>Aumentar volume final</li>
+                                <li>Pegar pessoas indecisas</li>
+                                <li>Criar sensação de movimento</li>
+                            </ul>
+                            <span>Mas <strong>o motor principal continua sendo o orgânico dela.</strong></span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="proj-card highlight-proj">
-                <h3><span class="sub" style="color:var(--primary); display:block; margin-bottom: 0.5rem;">Escala – 2.000
-                        compradores</span></h3>
-                <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
-                <div style="text-align: left; font-size: 1.1rem; line-height: 2;">
-                    <div style="display:flex; justify-content:space-between; color: #fff;"><span>Produto 97:</span>
-                        <strong>R$ 194.000</strong></div>
-                    <div style="display:flex; justify-content:space-between; color: #fff;"><span>Upsell 10%:</span>
-                        <strong style="color:var(--primary)">R$ 99.400</strong></div>
-                </div>
-                <div class="scenario-total">
-                    <div style="font-size: 1rem; color: #cbd5e1;">Total:</div>
-                    <div class="revenue">≈ R$ 293.400</div>
+            <!-- Fase 3 - LIVE 15 -->
+            <div class="phase-card feature-card fade-in">
+                <div class="phase-number pulse">Dia 15</div>
+                <h2>Live do Produto R$97 <i class="ri-live-fill"></i></h2>
+                <div class="grid-2">
+                    <div class="content-box">
+                        <h4>Estrutura:</h4>
+                        <ol>
+                            <li>História real da Thaís</li>
+                            <li>Dor</li>
+                            <li>Autoridade do Doutor</li>
+                            <li>Explicação do método</li>
+                            <li>Oferta</li>
+                        </ol>
+                    </div>
+                    <div class="highlight-box">
+                        <i class="ri-hand-coin-line large-icon"></i>
+                        <p class="big-quote">Oferta</p>
+                        <ul class="bullet-list"
+                            style="text-align:left; color:#fff; list-style-type:none; margin-left:0; margin-top:1rem;">
+                            <li><strong>Produto de entrada:</strong> R$97</li>
+                            <li><strong>Prazo:</strong> 24h</li>
+                            <li><strong>Meta de conversão:</strong> 5% a 15%</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <!-- Fase 4 - UPSELL -->
+            <div class="phase-card upsell-card fade-in">
+                <div class="phase-number">Dia 22</div>
+                <h2>Live de Recompra <i class="ri-refresh-line"></i></h2>
+                <p><strong>Agora entra o produto maior.</strong></p>
+                <div class="content-box" style="background: rgba(0,0,0,0.4); text-align: center;">
+                    <h3 style="color: #fff; font-size: 1.5rem; margin-bottom: 1rem;">🔥 21 Dias de Transformação
+                        Metabólica
+                    </h3>
+                    <p style="font-size: 1.2rem; text-decoration: line-through; color: #94a3b8;">De 997</p>
+                    <p style="font-size: 2.5rem; color: #c4b5fd; font-weight: bold; margin: 0.5rem 0;">Por 497</p>
+                    <div class="alert info"
+                        style="justify-content: center; background: rgba(139, 92, 246, 0.2); border-color: rgba(139, 92, 246, 0.4); color: #c4b5fd;">
+                        <i class="ri-information-fill"></i> <span>Somente ao vivo.</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <section id="projecao" class="projections fade-in">
+            <h2><i class="ri-bar-chart-box-fill"></i> Cenários de Resultado</h2>
+            <div class="cards-grid">
+                <div class="proj-card">
+                    <h3><span class="sub" style="color:#fff; display:block; margin-bottom: 0.5rem;">Escala – 1.000
+                            compradores</span>(quando rodar máquina maior)</h3>
+                    <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+                    <div style="text-align: left; font-size: 1.1rem; line-height: 2;">
+                        <div style="display:flex; justify-content:space-between"><span>Produto 97:</span> <strong>R$
+                                97.000</strong></div>
+                        <div style="display:flex; justify-content:space-between"><span>Upsell 10%:</span> <strong
+                                style="color:var(--primary)">R$ 49.700</strong></div>
+                    </div>
+                    <div class="scenario-total">
+                        <div style="font-size: 1rem; color: #cbd5e1;">Total:</div>
+                        <div class="revenue">≈ R$ 146.700</div>
+                    </div>
+                </div>
+
+                <div class="proj-card highlight-proj">
+                    <h3><span class="sub" style="color:var(--primary); display:block; margin-bottom: 0.5rem;">Escala –
+                            2.000
+                            compradores</span></h3>
+                    <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin: 1rem 0;">
+                    <div style="text-align: left; font-size: 1.1rem; line-height: 2;">
+                        <div style="display:flex; justify-content:space-between; color: #fff;"><span>Produto 97:</span>
+                            <strong>R$ 194.000</strong>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; color: #fff;"><span>Upsell 10%:</span>
+                            <strong style="color:var(--primary)">R$ 99.400</strong>
+                        </div>
+                    </div>
+                    <div class="scenario-total">
+                        <div style="font-size: 1rem; color: #cbd5e1;">Total:</div>
+                        <div class="revenue">≈ R$ 293.400</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- TAB 2: REELS E STORIES (Nova) -->
+    <div id="tab-reels" class="tab-pane">
+        <main class="timeline">
+
+            <div class="grid-2">
+                <!-- Formato Fixo -->
+                <div class="phase-card fade-in" style="margin-bottom: 2rem;">
+                    <h2><i class="ri-vidicon-line"></i> Formato Fixo Diário</h2>
+                    <div class="content-box">
+                        <ul class="bullet-list" style="margin-left:0; list-style:none;">
+                            <li>🎥 <strong>1 Reels principal</strong> (se trocando + tema)</li>
+                            <li>📲 <strong>Stories</strong> reforçando o tema</li>
+                            <li>📌 <strong>1 CTA leve</strong> (curiosidade / grupo / live)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stories Padrão -->
+                <div class="phase-card fade-in" style="margin-bottom: 2rem; border-color: rgba(244, 63, 94, 0.4);">
+                    <h2><i class="ri-smartphone-line"></i> Padrão de Stories Diário</h2>
+                    <div class="content-box">
+                        <p style="color:#fff; margin-bottom: 0.5rem;"><strong>Todos os dias:</strong></p>
+                        <ul class="bullet-list" style="margin-left:0; list-style:none;">
+                            <li>1️⃣ Story pessoal</li>
+                            <li>2️⃣ Story educativo</li>
+                            <li>3️⃣ Story emocional</li>
+                            <li>4️⃣ Print de interação</li>
+                            <li>5️⃣ CTA leve</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase-card fade-in">
+                <div class="phase-number pulse">Tema por Dia</div>
+                <h2>Cronograma 14 Dias <i class="ri-calendar-todo-fill"></i></h2>
+
+                <div class="timeline-grid">
+                    <!-- Dia 1 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 1</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Não era falta de
+                            esforço"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels (se trocando):</strong> "Eu achava que o problema era eu… que eu não me
+                                esforçava o suficiente."</li>
+                            <li><strong>Stories:</strong><br>- "Não acredito que fiquei tanto tempo sem saber
+                                disso."<br>- "E não tem nada a ver com força de vontade."<br><em
+                                    style="color:#94a3b8; font-size:0.9rem;">(Sem grupo ainda)</em></li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 2 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 2</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Metabolismo não é o
+                            que você pensa"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Você acha que metabolismo lento é genética… mas talvez não
+                                seja."</li>
+                            <li><strong>Stories:</strong><br>Enquete: "Você acha que seu metabolismo é lento?"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 3 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 3</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Efeito sanfona não é
+                            normal"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Talvez você não tenha problema com comida… mas com informação
+                                errada."</li>
+                            <li><strong>Stories:</strong><br>- Print de direct de seguidora.<br>- "Vocês estão me
+                                perguntando muito…"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 4 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 4</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Foi aqui que tudo fez
+                            sentido"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Eu só entendi isso depois de conversar com o Dr Pedro
+                                Caravatto." <br><em style="color:#94a3b8; font-size:0.9rem;">(Marca o Pedro
+                                    Caravatto)</em></li>
+                            <li><strong>Stories:</strong><br>- Bastidor com ele.<br>- "Ele explicou algo que ninguém
+                                tinha me explicado."</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 5 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 5</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Eu queria que mais
+                            pessoas soubessem"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Eu paguei caro pra entender isso… mas queria liberar."</li>
+                            <li><strong>Stories:</strong><br>- "Vou falar com ele."<br>Enquete: "Você entraria se eu
+                                conseguisse?"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 6 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 6</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Consegui"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Ele liberou."</li>
+                            <li><strong>Stories:</strong><br>- Abre grupo.<br>- "Eu vou estar lá dentro junto com ele."
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 7 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 7</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Olha isso"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Vocês não têm noção do que está acontecendo nesse grupo."</li>
+                            <li><strong>Stories:</strong><br>- Print do grupo enchendo.<br>- "Já somos mais de ___
+                                pessoas."</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 8 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 8</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Erro nº1 que trava
+                            metabolismo"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> Tema educativo simples.</li>
+                            <li><strong>Stories:</strong><br>- Mini explicação.<br>- Lembra da live dia 15.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 9 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 9</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Por que dieta falha"
+                        </p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "O problema não é a dieta… é o que vem antes dela."</li>
+                            <li><strong>Stories:</strong><br>Caixa de pergunta: "Qual sua maior dificuldade?"</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 10 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 10</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"O que ninguém te
+                            conta"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> Tema mais profundo sobre metabolismo.</li>
+                            <li><strong>Stories:</strong><br>- "Isso o Dr Pedro vai explicar melhor dia 15."</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 11 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 11</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Metabolismo é
+                            adaptação"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> Explicação simples.</li>
+                            <li><strong>Stories:</strong><br>- Lembrete: "Estamos chegando no dia."</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 12 -->
+                    <div class="timeline-box" style="border-left: 2px solid var(--warning);">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 12</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Você não está
+                            quebrada"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> Emocional.</li>
+                            <li><strong>Stories:</strong><br>- Print do grupo.<br>- Começa contagem regressiva.</li>
+                        </ul>
+                        <div class="alert warning" style="margin-top:0.8rem; padding: 0.5rem; font-size: 0.85rem;">
+                            <i class="ri-money-dollar-circle-fill"></i> <span>Aqui pode entrar tráfego pago até R$1.000
+                                para levar mais gente ao grupo.</span>
+                        </div>
+                    </div>
+
+                    <!-- Dia 13 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 13</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"É amanhã"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Amanhã eu e o Dr Pedro vamos explicar tudo."</li>
+                            <li><strong>Stories:</strong><br>- Contagem regressiva.<br>- Bastidor.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 14 -->
+                    <div class="timeline-box">
+                        <h4><i class="ri-calendar-event-line"></i> Dia 14</h4>
+                        <p style="color:var(--primary); font-weight:bold; margin-bottom:0.5rem;">"Última chance"</p>
+                        <ul class="day-list">
+                            <li><strong>Reels:</strong> "Se você sempre achou que o problema era você… entra agora."
+                            </li>
+                            <li><strong>Stories:</strong><br>- Última chamada para grupo.<br>- "Amanhã ao vivo."</li>
+                        </ul>
+                    </div>
+
+                    <!-- Dia 15 -->
+                    <div class="timeline-box highlight-traffic" style="border-left-color: var(--primary);">
+                        <h4 style="color:var(--primary); border-bottom: none; margin-bottom:0;"><i
+                                class="ri-live-fill"></i> Dia 15</h4>
+                        <p style="color:var(--primary); font-size:1.5rem; font-weight:bold; margin-bottom:0.5rem;">LIVE
+                            R$97</p>
+                        <ul class="day-list" style="color: #fff;">
+                            <li><i class="ri-check-line"></i> Explanação completa + Oferta.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Resumo de Trafego -->
+            <div class="phase-card fade-in mt-large" style="background: rgba(0,0,0,0.4);">
+                <h2><i class="ri-megaphone-fill"></i> Tráfego</h2>
+                <div class="content-box">
+                    <p style="color:#fff;">Usar apenas do <strong>Dia 12 ao 15</strong>.</p>
+                    <ul class="bullet-list" style="margin-left:0; list-style:none;">
+                        <li>🎯 <strong>Objetivo:</strong> Levar direto para o grupo.</li>
+                        <li>❌ <strong>Não vender.</strong></li>
+                        <li>✅ <strong>Só aumentar volume antes da live.</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+    </div>
 
     <footer>
         <p>Estratégia de Lançamento Premium — Otimizada para escala brutal com orgânico.</p>
